@@ -14,12 +14,12 @@ def get_driver():
 def test_homepage_title():
     driver = get_driver()
     driver.get("http://35.89.148.206:3000/")
-    assert "Your Expected Title" in driver.title
+    assert "Chocowi" in driver.title
     driver.quit()
 
 def test_login_button_exists():
     driver = get_driver()
     driver.get("http://35.89.148.206:3000/")
     time.sleep(2)
-    assert driver.find_element(By.ID, "login-btn")
+    assert driver.find_element(By.CLASS_NAME, "signin")
     driver.quit()
